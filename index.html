@@ -9,28 +9,37 @@
            <link rel="stylesheet" href="css/normalize.css">
            <link rel="stylesheet" href="css/font-awesome.min.css">
            <link rel="stylesheet" href="css/estilos.css">
+           <script src="js/script.js"></script>
+
        </head>
        <body>
            <header>
               <div class="contenedor"> 
+
+                <button class="menu-icono" id="btn-hamburguesa">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
                                  
                   <nav class="menu">
-                     <a href="#">Acerca de</a>
-                     <a href="#">Trabajos</a>  
-                     <a href="#">Contacto</a>  
+                     <a href="#acerca-de">Acerca de</a>
+                     <a href="#trabajos">Galeria</a>  
+                     <a href="#contacto">Contacto</a>  
                   </nav>
                   
                   <div class="contenedor-texto">
                     <div class="texto">
                          <h1 class="nombre">Alberto Franco</h1>
-                        <h2 class="profesion">Fotógrafo</h2>
+                        <h2 class="profesion">Fotografía que cuenta historias y vende proyectos.</h2>
+                        <p class="nota">Luz natural, narrativa visual y técnica profesional para marcas y proyectos exigentes.</p>
                    </div>
                   </div>
               </div>
            </header>
            
            <section class="main">
-              <section class="acerca-de">
+              <section class="acerca-de" id="acerca-de">
                 <div class="contenedor">
                   <div class="foto">
                      <img  src="img/Alberto.webp" width="115" height="115" alt="Fotografía profesional">
@@ -38,17 +47,16 @@
                   
                   <div class="texto">
                      <h3 class="titulo">ACERCA DE</h3>
-                     <h4 class="subtitulo">BIOGRAFÍA CORTA</h4>
-                     <p> Alberto Franco es uno de los Lideres mundiales de Fotografía y Director Creativo. 
-                       Con su atrapante talento captura los momentos más inesperados que tanto las personas y la naturaleza transmiten.
-                       Captura no solo la belleza de un edificio, sino también su forma y funcionalidad. Es un experto analizando la luz natural, ya que ésta puede crear un ambiente muy distinto y diferenciador en una foto.</p>     
+                     <h4 class="subtitulo">BIOGRAFÍA</h4>
+                     <p> Detrás de cada gran fotografía hay una estrategia de luz y perspectiva. Como fotógrafo y director creativo, me especializo en capturar la esencia espontánea de las personas, la majestuosidad de la naturaleza y la funcionalidad estética de la arquitectura.</p>
+                     <p>Mi enfoque se centra en dominar la luz natural para crear atmósferas únicas que no solo congelen un momento, sino que conecten emocionalmente con quien ve la imagen.</p>     
                   </div>
                 </div>      
               </section>
                
-               <section class="trabajos">
+               <section class="trabajos" id="trabajos">
                       <div class="contenedor">
-                         <h3 class="titulo">Trabajos</h3>
+                         <h3 class="titulo">Portafolio</h3>
                          <div class="contenedor-trabajos">
                              <div class="trabajo">
                               <div class="thumb">
@@ -57,7 +65,7 @@
                               <div class="descripcion">
                                    
                                   <p class="categoria">
-                                    Arquitectura
+                                    Corporativo Canadá
                                   </p>
                               </div>     
                              </div>
@@ -68,7 +76,7 @@
                               <div class="descripcion">
                                    
                                   <p class="categoria">
-                                    Arquitectura
+                                    Proyecto en Inglaterra
                                   </p>
                               </div>     
                              </div>
@@ -79,7 +87,7 @@
                               <div class="descripcion">
                                    
                                   <p class="categoria">
-                                    Arquitectura
+                                    Arquitectura en Madrid
                                   </p>
                               </div>     
                              </div>
@@ -90,8 +98,7 @@
                               <div class="descripcion">
                                    
                                   <p class="categoria">
-                                    Arquitectura
-                                  </p>
+                                    Proyecto arquitectónico en CDMX                                  </p>
                               </div>     
                              </div>
                              <div class="trabajo">
@@ -101,7 +108,7 @@
                               <div class="descripcion">
                                    
                                   <p class="categoria">
-                                    Moda
+                                    Sesión editorial para "J&T"
                                   </p>
                               </div>     
                              </div>
@@ -112,7 +119,7 @@
                               <div class="descripcion">
                                    
                                   <p class="categoria">
-                                    Naturaleza
+                                    Documnetal
                                   </p>
                               </div>     
                              </div>
@@ -123,7 +130,7 @@
                               <div class="descripcion">
                                    
                                   <p class="categoria">
-                                    Naturaleza
+                                    Eventos especiales
                                   </p>
                               </div>     
                              </div>
@@ -134,7 +141,7 @@
                               <div class="descripcion">
                                    
                                   <p class="categoria">
-                                    Naturaleza
+                                    Naturaleza/ Paisajes
                                   </p>
                               </div>     
                              </div>
@@ -144,32 +151,38 @@
            </section>
            
            <footer>               
-              <section class="contacto">
+              <section class="contacto" id="contacto">
                 <div class="contenedor">
                   <h3 class="titulo">Contacto</h3>
                     <form class="formulario" action="">
                       <input type="text" placeholder="Nombre" name="nombre" required>
                       <input type="email" placeholder="Correo" name="Ccorreo" required>
                       <textarea name="mensaje" placeholder="mensaje"></textarea>     
-                      <input class="boton" type="submit" value="Enviar">      
+                      <input class="boton" type="submit" value="Cotizar mi sesion">      
                     </form>                  
                 </div>
               </section>      
                
               <section class="rrss">
                 <div class="contenedor">
-                  <a href="https://facebook.com/landsenlinea" class="face"><i class="fa fa-facebook-official" ></i></a>
-                  <a href="https://instagram.com/landscommunity" class="ig"><i class="fa fa-instagram"></i></a>
+                  <a href="#" class="face"><i class="fa fa-facebook-official" ></i></a>
+                  <a href="#" class="ig"><i class="fa fa-instagram"></i></a>
                   <a href="https://www.linkedin.com/company/landy-community-manager" class="in"><i class="fa fa-linkedin"></i></a>
-                  <a href="https://bit.ly/3CeH2NQ" class="wats"><i class="fa fa-whatsapp"></i></a>
+                  <a href="" class="wats"><i class="fa fa-whatsapp"></i></a>
                 </div>
                 <div class="copyC ontenedor">
                   <div class="copy">
-                    <p class="copyR">Copyrigth &#169 Alberto Franco | Diseñado por<a class="web" href="https://l-enlinea.com">En Línea <img class="logoFotter" src="img/enLinea.webp"  width="30" height="30" alt="Diseño web"></a></p>
+                    <p class="copyR">Copyright &#169 Alberto Franco | Diseñado por Landy Camacho</p>
                   </div>
                 </div>
               </section>
            </footer>
+
+           <!--Ventana flotangte para agrandar fotos-->
+           <div class="lightbox" id="lightbox">
+            <span class="lightbox-cerrar">&times</span>
+            <img class="lightbox-contenido" id="lightbox-img" src="" alt="foto">
+           </div>
        </body>
     </html>
 </DOCTYPE>

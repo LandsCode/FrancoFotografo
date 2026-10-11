@@ -65,6 +65,16 @@ header .contenedor-texto .texto h2{
     color: #fff;
     font-weight: 300;
     margin: 0;
+    margin-bottom: 15px;
+    
+    
+}
+
+header .contenedor-texto .nota {
+    color: #fff;
+    font-weight: 100;
+    margin: 0; 
+    margin-top: 5px;  
 }
 
 header .contenedor-texto .texto .nombre{
@@ -130,10 +140,6 @@ header .contenedor-texto .texto .profesion{
     padding: 60px 0;
 }
 
-.main .trabajos .contenedor{
-    /*overflow: hidden;*/    
-}
-
 .main .trabajos .titulo{
     font-size: 34px;
     line-height: 34px;
@@ -165,6 +171,20 @@ header .contenedor-texto .texto .profesion{
     width: 100%;
     vertical-align: top;
     border-radius: 3px;
+    cursor: pointer;
+    display: block; /*asegura que la sombra y el movimiento se apliquen*/
+    transition: transform 0.3 ease, box-shadow 0.3 ease;
+
+}
+
+/*estado cuando el usuario pasa el mouse*/
+.main .trabajos .contenedor-trabajos .trabajo .thumb img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0,3);
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .thumb img{
+    overflow: visible !important;
 }
 
 .main .trabajos .contenedor-trabajos .trabajo .descripcion{
@@ -237,7 +257,7 @@ footer .contacto .formulario textarea{
 
 footer .contacto .formulario .boton{
     margin: auto;
-    background: #474d45;
+    background: #454745;
     color: #fff;
     border: none;
     border-radius: 5%;
@@ -246,7 +266,7 @@ footer .contacto .formulario .boton{
 }
 
 footer .contacto .formulario .boton:hover{
-    background: #387bea;
+    background: #42573b;
 }
 
 footer .rrss{
@@ -302,7 +322,53 @@ footer .rrss .web{
     text-decoration: none;
 }
 
+/*esilos del lightbox*/
+.lightbox {
+    display: none;/*oculto por defecto*/
+    position: fixed;
+    z-index: 1000;/*por encima de todo el diseño*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+/*la foto ampliada*/
+.lightbox-contenido {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0,5);
+    animation: zoom 0.3s ease;
+}
+
+/*boton para cerrar*/
+.lightbox-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.lightbox-cerrar:hover {
+    color: #bbb;
+}
+
+/*animacion de zoom suavew*/
+@keyframes zoom {
+    from { transform: scale(0.7); opacity: 0;}
+    to { transform: scale(1); opacity: 1;}
+}
 /*-------------------- MEDIA QUERIES ---------------------*/
+
 
 @media screen and (max-width:800px){
     header .menu{
